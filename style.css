@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0f0f10;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #0f0f10;
+}
+
+.nav {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo-pequena {
+  height: clamp(35px, 5vw, 55px);
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: clamp(14px, 1.2vw, 16px);
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.nav-btn:hover,
+.nav-btn.ativo {
+  background-color: #3c3cfc;
+  color: white;
+}
+
+.inscreva-se-topo {
+  background-color: #3c3cfc;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+.inscreva-se-topo:hover {
+  background-color: #2323a6;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #0f0f10 20%, #151a4a 60%, #2842ff 100%);
+  padding: clamp(40px, 6vw, 60px) clamp(16px, 5vw, 40px);
+  min-height: 100dvh;
+  gap: 40px;
+}
+
+.logo-grande {
+    
+  width: clamp(200px, 40vw, 1000px);
+  height: auto;
+  flex-shrink: 0;
+}
+
+.conteudo {
+  flex: 1;
+  max-width: 700px;
+  margin-left: clamp(0px, 5vw, 200px);
+}
+
+.conteudo h1 {
+  font-size: clamp(24px, 4vw, 42px);
+  margin-bottom: 20px;
+}
+
+.conteudo p {
+  text-align: justify;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.btn-inscreva-se {
+  background-color: #3c3cfc;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-weight: bold;
+  font-size: clamp(14px, 1.5vw, 18px);
+  border-radius: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-inscreva-se:hover {
+  background-color: #2323a6;
+}
+
+
+.atleta {
+  position: relative;
+  background-image: url('./assets/teste.png');
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 60px 5%;
+  color: white;
+  flex-direction: row;
+}
+
+.atleta .overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateX(80px);
+}
+
+.atleta .overlay.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.atleta .titulo-livre {
+  position: absolute;
+  bottom: 0px;
+  left: 40px;
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: bold;
+  z-index: 1;
+  white-space: pre-line;
+  line-height: 1.1;
+}
+
+.atleta .titulo-livre span:last-child {
+  display: block;
+  padding-left: 40px;
+}
+
+.atleta p {
+  font-size: clamp(16px, 2vw, 28px);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+
+@media (min-width: 2560px) {
+  .nav,
+  .hero,
+  .atleta .overlay {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  .conteudo p {
+    font-size: 22px;
+  }
+
+  .btn-inscreva-se,
+  .inscreva-se-topo {
+    font-size: 20px;
+    padding: 16px 28px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .conteudo {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .atleta {
+    flex-direction: column;
+    padding: 40px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .atleta .overlay {
+    transform: translateX(0);
+  }
+
+  .atleta .titulo-livre {
+    position: static;
+    margin-bottom: 20px;
+    font-size: 10vw;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-btn,
+  .inscreva-se-topo {
+    width: 100%;
+    text-align: left;
+  }
+
+  .hero {
+    padding: 30px 16px;
+  }
+
+  .logo-grande {
+    width: 80%;
+  }
+
+  .btn-inscreva-se {
+    width: 100%;
+  }
+
+  .atleta .overlay {
+    padding: 20px;
+  }
+
+  .atleta .titulo-livre {
+    font-size: 12vw;
+    padding-left: 0;
+  }
+}
