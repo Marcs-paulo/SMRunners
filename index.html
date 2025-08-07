@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>São Miguel Runners</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
     <header>
         <div class="nav">
             <img src="assets/Logo.png" alt="Logo" class="logo-pequena" />
-            <nav>
+
+            <button class="hamburguer" onclick="toggleMenu()">☰</button>
+
+            <nav class="nav-links">
                 <a href="#sobre" class="nav-btn ativo">Sobre</a>
                 <a href="#depoimentos" class="nav-btn">Depoimentos</a>
                 <a href="#calendario" class="nav-btn">Calendário</a>
+                <a href="#inscreva-se" class="inscreva-se-topo">Inscreva-se</a>
             </nav>
-            <a href="#inscreva-se" class="nav-btn">Inscreva-se</a>
+            <nav class="menu-mobile">
+                <a href="#sobre" class="nav-btn ativo">Sobre</a>
+                <a href="#depoimentos" class="nav-btn">Depoimentos</a>
+                <a href="#calendario" class="nav-btn">Calendário</a>
+                <a href="#inscreva-se" class="inscreva-se-topo">Inscreva-se</a>
+            </nav>
         </div>
     </header>
+
     <main>
         <section class="hero">
             <img src="assets/LogoG.png" alt="Logo grande" class="logo-grande" />
@@ -121,8 +134,9 @@
                             Nosso objetivo é apoiar uns aos outros, promover encontros para correr juntos e incentivar
                             hábitos de vida saudáveis com respeito, acolhimento e energia positiva.
                         </p>
-                        <a href="https://chat.whatsapp.com/seu-grupo" target="_blank" class="botao-quadro">ENTRE NO
-                            GRUPO</a>
+                        <a href="https://chat.whatsapp.com/KqxV26aWXTj1P1vKFSggmA" target="_blank"
+                            class="botao-quadro">ENTRE NO GRUPO</a>
+
                     </div>
                     <div class="quadro">
                         <h3>Seja um atleta da equipe</h3>
@@ -134,7 +148,9 @@
                             Preencha seus dados com atenção. A coordenação fará uma análise. As pessoas que se
                             identificarem com a proposta serão convidadas a participar.
                         </p>
-                        <a href="#formulario" class="botao-quadro">INSCREVA-SE NA EQUIPE</a>
+                        <a href="http://127.0.0.1:5500/index.html#formulario" class="botao-quadro">INSCREVA-SE NA
+                            EQUIPE</a>
+
                     </div>
                 </div>
             </div>
@@ -145,4 +161,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
